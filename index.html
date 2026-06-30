@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Results summary component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,33 +18,61 @@
   </style>
 </head>
 <body>
+  <main class="component-wrapper">
+    <article class="results-card">
 
-  Your Result
-  76
-  of 100
+      <section class="result-panel">
+        <h1 class="panel-title">Your Result</h1>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+        <div class="score-circle">
+          <strong class="score-total">76</strong>
+          <span class="score-max">of 100</span>
+        </div>
 
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+        <div class="result-feedback">
+          <p class="feedback-status">Great</p>
+          <p class="feedback-desc">You scored higher than 65% of the people who have taken these tests.</p>
+        </div>
+      </section>
+      <section class="summary-panel">
+        <h2 class="summary-title">Summary</h2>
+        <div class="summary-rows-container">
+          <div class="summary-row type-reaction">
+            <div class="row-label">
+              <img src="./assets/images/icon-reaction.svg" alt="reaction-banner" aria-hidden="true">
+              <span>Reaction</span>
+            </div>
+            <p class="row-score">80<span class="fade"> / 100</span></p>       
+          </div>
+          <div class="summary-row type-memory">
+            <div class="row-label">
+              <img src="./assets/images/icon-memory.svg" alt="memory-banner" aria-hidden="true">
+              <span>Memory</span>
+            </div>
+            <p class="row-score">92<span class="fade"> / 100</span></p>
+          </div>
+          <div class="summary-row type-verbal">
+            <div class="row-label">
+              <img src="./assets/images/icon-verbal.svg" alt="verbal-banner" aria-hidden="true">
+              <span>Verbal</span>
+            </div>
+            <p class="row-score">61<span fade> / 100</span></p>
+          </div>
+          <div class="summary-row type-visual">
+            <div class="row-label">
+              <img src="./assets/images/icon-visual.svg" alt="visaul-banner" aria-hidden="true">
+              <span>Visual</span>
+            </div>
+            <p class="row-score">73<span class="fade"> / 100</span></p>
+          </div>
+        </div>
+        <button class="btn-continue">Continue</button>
+      </section>
+    </article>
+  </main>
+  <!--<footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/ZinThuAung-LAB" target="_blank">Zin Thu Aung</a>.-->
   </footer>
 </body>
 </html>
